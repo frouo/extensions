@@ -1,0 +1,67 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "chatgpt",
+  "title": "ChatGPT",
+  "description": "Chat with ChatGPT",
+  "icon": "extension-icon.png",
+  "author": "frouo",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "New Conversation",
+      "description": "Start a new conversation with ChatGPT",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "title": "accessToken",
+      "description": "Your ChatGPT access token, see README",
+      "name": "accessToken",
+      "type": "password",
+      "required": true
+    },
+    {
+      "title": "_puid",
+      "description": "Find this value in your cookie, see README",
+      "name": "puid",
+      "type": "password",
+      "required": true
+    },
+    {
+      "title": "model",
+      "description": "The OpenAI model",
+      "name": "model",
+      "type": "textfield",
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.47.3",
+    "@raycast/utils": "^1.4.18",
+    "node-fetch": "^3.3.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
